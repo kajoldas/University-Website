@@ -6,6 +6,7 @@ wesite: jsu.netlify.app
 #in this website we used severel component- home,  header, footer, about, service,  courses
 
 # we used Bootstrap and Vanilla Css 
+*This is the Live site link :https://jsonuniversisty.netlify.app/
 
 
 
