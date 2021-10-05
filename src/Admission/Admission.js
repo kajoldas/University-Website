@@ -6,6 +6,7 @@ const Admission = () => {
     return (
     <div className="admission">
    
+     {/* //////////Admission Reqirments added//////////// */}
    <Card className="from">
   
    <Card.Body>

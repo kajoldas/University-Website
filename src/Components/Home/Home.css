@@ -1,0 +1,29 @@
+
+.home-card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px 25px;
+    row-gap: 5px;
+}
+.card-container{
+    border: 1px solid goldenrod;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    padding: 20px 20px;
+    border-radius: 15px;
+
+}
+.card-img{
+    height: 200px;
+    width: 400px;
+    border-radius: 10px;
+}
+.card-btn{
+    background-color: honeydew;
+    border: 2px solid gray;
+}
+
+.card-btn:hover{
+    background-color: goldenrod;
+    border: 2px solid white;
+}

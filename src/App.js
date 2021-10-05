@@ -9,22 +9,12 @@ import Footer from './Components/Footer/Footer';
 import NotFound from './Components/NotFound/NotFound';
 import Services from './Components/Services/Services';
 import Admission from './Admission/Admission';
-// import { useState,  useEffect } from 'react';
+
 
 
 function App() {
-//   const [courses, setCourses] = useState([]);
 
-// useEffect( () => {
-//     fetch('./data.JSON')
-//     .then(res => res.json())
-//     .then(data => setCourses(data));
-// }, [])
-// {
-//     courses.map( courses =>  courses={courses})
-// }
 
-//     const {img, subject_title, course_fee, course_duration} = courses;
   return (
     <div className="App">
       <BrowserRouter>
@@ -33,19 +23,19 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/home"> 
+          <Route exact path="/home"> 
               <Home></Home>
           </Route>
-          <Route path="/services">
+          <Route exact path="/services">
             <Services></Services>
           </Route>
-          <Route path="/admission">
+          <Route exact path="/admission">
             <Admission></Admission>
           </Route>
-          <Route path="/about">
+          <Route exact path="/about">
             <About></About>
           </Route>
-        <Route path="*">
+        <Route exact path="*">
             <NotFound></NotFound>
         </Route>
         </Switch>

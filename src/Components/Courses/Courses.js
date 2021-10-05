@@ -1,11 +1,11 @@
-import Button from '@restart/ui/esm/Button';
+
 import React from 'react';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col } from 'react-bootstrap';
 import './Courses.css'
 
 
 const Courses = (props) => {
-    
+  // ......................... courese destructure ...............
     // console.log(props.courses);
     const {img, subject_title, course_fee, course_duration,detail} = props.courses;
     return (
@@ -18,14 +18,14 @@ const Courses = (props) => {
            <Card.Body>
            <Card.Title>
               <h2
-              className="h2">Subject Title:{subject_title}</h2>
+             className="h2">Subject Title:{subject_title}</h2>
            </Card.Title>
            <Card.Text>
            {detail}
           </Card.Text>
            <Card.Text> 
-            <h3>Courses Fee:{course_fee}</h3>
-              <h5>Course Duration:{course_duration}</h5>
+          <h3>Courses Fee:{course_fee}</h3>
+           <h5>Course Duration:{course_duration}</h5>
            
           </Card.Text>
         
