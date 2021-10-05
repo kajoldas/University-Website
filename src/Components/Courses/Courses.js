@@ -1,6 +1,7 @@
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
+import './Courses.css'
 
 
 const Courses = (props) => {
@@ -8,41 +9,33 @@ const Courses = (props) => {
     // console.log(props.courses);
     const {img, subject_title, course_fee, course_duration,detail} = props.courses;
     return (
-        <div>
-            
+        <div className="mycontainer">
+         
+           {Array.from({ length: 1 }).map((_, idx) => (
+           <Col>
+           <Card  className="card">
+           <Card.Img  className="img"   variant="top" src={img}  />
+           <Card.Body>
+           <Card.Title>
+              <h2
+              className="h2">Subject Title:{subject_title}</h2>
+           </Card.Title>
+           <Card.Text>
+           {detail}
+          </Card.Text>
+           <Card.Text> 
+            <h3>Courses Fee:{course_fee}</h3>
+              <h5>Course Duration:{course_duration}</h5>
            
-
-             <Container>
-                <Row >
-                    <Col md={3}>
-                        <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={img} />
-                        <Card.Body>
-                            <Card.Title>{subject_title}</Card.Title>
-                            <Card.Text>{detail} </Card.Text>
-                            <Card.Text>Course Fee: {course_fee} </Card.Text>
-                            <Card.Text>Course Duration: {course_duration} </Card.Text>
-                            <Button variant="primary" className="bg-primary text-white">Apply Now</Button>
-                        </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-                </Container> 
+          </Card.Text>
+        
+        </Card.Body>
+      </Card>
+    </Col>
+  ))}
 
 
-                {/* <Container className="my-col">
-                    <Row>
-                        <Col md={3}>
-                            <img  src={img}  alt="img"/>
-                            {subject_title}
-                            {detail} 
-                            Course Fee: {course_fee}
-                            Course Duration: {course_duration} 
-                            <Button variant="primary" className="bg-primary text-white">Apply Now</Button>
-                        </Col>
-                    </Row>
 
-                </Container> */}
         </div>
     );
 };
